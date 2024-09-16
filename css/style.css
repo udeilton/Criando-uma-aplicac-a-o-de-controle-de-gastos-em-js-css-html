@@ -44,3 +44,9 @@ button[disabled] {
     border: 1px solid white;
     
 }
+
+.erro {
+    color: white;
+    background: red;
+    display: none;
+}
