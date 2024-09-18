@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login - Controle de gasto</title>
-    </head>
-    <body>
-        <form action="exemplo.html">
-            <div class="form-field">
-                <div><label>Email</label></div>
 
-                <input type="email" name="email" id="email" onchange="onChangeEmail()"
-                    placeholder="Digite seu Email" />
-                <div class="erro" id="email-required-error">Email é obrigatório!</div>
-                <div class="erro" id="email-invalid-error">Email não é valido</div>    
-            </div>
-            <div class="form-field">
-                <div><label>Senha</label></div>
-                <input type="password" name="password" id="password" onchange="onChangePassword()"
-                    placeholder="Digite sua Senha" />
-                <div class="erro" id="password-required-error">Senha é obrigatóri!</div>    
-            </div>
-            <div>
-                <button type="button" class="clear" disabled="true" id="recover-password-button">Recupera Senha</button>
-            </div>
-            <div>
-                <button type="button" class="solid" id="login-botton" disabled="true" onclick="login()">Entra</button>
-            </div>
-            <div>
-                <button type="button" class="outline">Registrar</button>
-            </div>
-        </form>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Controle de gasto</title>
+</head>
 
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/global.css"/>
-    <script src="/JS/main.js"></script>
-    <script src="/JS/validations.js"></script>
+<body>
+    <form action="exemplo.html">
+        <div class="form-field">
+            <div><label>Email</label></div>
 
+            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="Digite seu Email" />
+            <div class="erro" id="email-required-error">Email é
+                obrigatório!</div>
+            <div class="erro" id="email-invalid-error">Email não é
+                valido</div>
+        </div>
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" onchange="onChangePassword()"
+                placeholder="Digite sua Senha" />
+            <div class="erro" id="password-required-error">Senha é
+                obrigatóri!</div>
+        </div>
+        <div>
+            <button type="button" class="clear" disabled="true" id="recover-password-button">Recupera Senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-botton" disabled="true" onclick="login()">Entra</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
+</body>
+
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/global.css" />
+<script src="/JS/main.js"></script>
+<script src="/JS/validations.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBXC42hb0IkVmyO6skExdeIEZatACa7JrY",
+        authDomain: "controle-de-gasto-50e07.firebaseapp.com",
+        projectId: "controle-de-gasto-50e07",
+        storageBucket: "controle-de-gasto-50e07.appspot.com",
+        messagingSenderId: "714353488756",
+        appId: "1:714353488756:web:f94df46b5a68bc3f9c7221"
+    };  
+
+    firebase.initializeApp(firebaseConfig);
+
+    console.log('antes');
+    
+    console.log('depois')
+</script>
 
 </html>
