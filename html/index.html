@@ -7,7 +7,7 @@
     </head>
     <body>
         <form action="exemplo.html">
-            <div>
+            <div class="form-field">
                 <div><label>Email</label></div>
 
                 <input type="email" name="email" id="email" onchange="onChangeEmail()"
@@ -15,7 +15,7 @@
                 <div class="erro" id="email-required-error">Email é obrigatório!</div>
                 <div class="erro" id="email-invalid-error">Email não é valido</div>    
             </div>
-            <div>
+            <div class="form-field">
                 <div><label>Senha</label></div>
                 <input type="password" name="password" id="password" onchange="onChangePassword()"
                     placeholder="Digite sua Senha" />
@@ -25,7 +25,7 @@
                 <button type="button" class="clear" disabled="true" id="recover-password-button">Recupera Senha</button>
             </div>
             <div>
-                <button type="button" class="solid" id="login-botton" disabled="true">Entra</button>
+                <button type="button" class="solid" id="login-botton" disabled="true" onclick="login()">Entra</button>
             </div>
             <div>
                 <button type="button" class="outline">Registrar</button>
@@ -34,7 +34,9 @@
     </body>
 
     <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/global.css"/>
     <script src="/JS/main.js"></script>
+    <script src="/JS/validations.js"></script>
 
 
 </html>
