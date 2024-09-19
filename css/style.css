@@ -1,25 +1,27 @@
 body {
-    background: rgb(85, 91, 92);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: rgb(85, 91, 92);   
     height: 100vh;
 }
+
 form {
     width: 300px;
 }
+
 input {
     border: none;
 }
+
 input, button {
     padding: 10px;
     
     width: -webkit-fill-available;
 }
+
 button {
     cursor: pointer;
     margin-bottom: 10px;  
 }
+
 .form-field{
     margin-bottom: 10px;
 }
