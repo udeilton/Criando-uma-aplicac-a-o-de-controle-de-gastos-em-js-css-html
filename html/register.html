@@ -9,7 +9,8 @@
         <form>
             <div class="form-field">
                 <div><label>Email</label></div>
-                <input type="email" placeholder="Digite seu email">
+                <input type="email" placeholder="Digite seu email" 
+                onchange="onChangeEmail()" id="email"/> 
                 <div class="error" id="email-required-error">
                     Email é obrigatório!
                 </div>
@@ -20,10 +21,9 @@
 
             <div class="form-field">
                 <div><label>Senha</label></div>
-                <input type="password" placeholder="Senha">
-                <div class="error" id="password-required-error"></div>
-                    Senha é obrigatório!
-                </div>
+                <input type="password" placeholder="Senha" id="password" onchange="onChangePassword()"/>
+                <div class="error" id="password-required-error">Senha é obrigatório!</div>
+                    
                 <div class="error" id="password-min-length-error">
                     Senha deve ter 6 caracteres
                 </div>
@@ -32,14 +32,13 @@
 
             <div class=" form-field">
                 <div><label>Confirma Senha</label></div>
-                <input type="password" placeholder="Comfirmar senha">
-                <div class="error" id="password-doesnt-match-error"></div>
-                Senha e confirma senha devem ser iguais
-            </div>
+                <input type="password" placeholder="Comfirmar senha" id="confirm-password" onchange="onChangeConfirmPassword()"/>
+                <div class="error" id="password-doesnt-match-error">Senha e confirma senha devem ser iguais</div>
+                
             </div>
 
             <div>
-                <button type="button" class="solid" disabled="true">Registrar</button>
+                <button type="button" class="solid" disabled="true" id="register-button">Registrar</button>
             </div>
 
             <div>
@@ -52,4 +51,7 @@
 
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/register.css" />
+
+    <script src="/JS/register.js"></script>
+    <script src="/JS/validations.js"></script>
 </html>
